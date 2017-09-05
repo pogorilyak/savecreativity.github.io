@@ -1,0 +1,54 @@
+.social-wall {
+  padding-top: 50px;
+  background-color: #f2f833;
+
+  .wall-title {
+    font-weight: 300;
+    text-align: center;
+    font-size: 36px;
+    height: 50px;
+    text-transform: uppercase;
+
+    &:before {
+      content: '#';
+    }
+  }
+
+  .juicer-feed h1.referral {
+    display: none;
+  }
+
+  .juicer-feed {
+    height: calc(100% - 50px) !important;
+  }
+
+  .juicer-feed ul.j-filters {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 50px 0;
+
+    li {
+      order: 2;
+      width: auto;
+      background-color: transparent;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #000;
+      font-weight: 400;
+      margin: 0 30px;
+
+      &:before {
+        display: none;
+      }
+
+      &.all {
+        order: 1;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .juicer-feed.modern .j-poster {
+    display: none;
+  }
+}
