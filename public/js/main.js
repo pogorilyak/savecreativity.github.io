@@ -69,19 +69,31 @@ var influencers = [
 
 $(document).ready(function() {
     var height = window.innerHeight;
+    var width = window.innerWidth;
     var $slider = $('#slider');
 
-    $('#pagepiling').pagepiling({
-        menu: '#menu',
-        anchors: ['page1', 'page2', 'page3'],
-        scrollBar: false,
-        navigation: false,
-        afterRender: function(){
-            //playing the video
-            $('video').get(0).play();
-            $('.header-block').removeClass('placeholder');
-        }
-    });
+    if (width <= 767) {
+        var $toggleBtn = $('#toggleBtn');
+        var $menu = $('#menu');
+
+        $toggleBtn.on('click', function (event) {
+            $menu.toggleClass('open')
+        })
+    }
+
+    if (width >= 768) {
+        $('#pagepiling').pagepiling({
+            menu: '#menu',
+            anchors: ['page1', 'page2', 'page3'],
+            scrollBar: false,
+            navigation: false,
+            afterRender: function(){
+                //playing the video
+                $('video').get(0).play();
+                $('.header-block').removeClass('placeholder');
+            }
+        });
+    }
 
     $('#wallsio-widget-script').attr('data-height', height);
 
@@ -126,3 +138,12 @@ $(document).ready(function() {
 
     createSlider(influencers);
 });
+
+
+
+
+
+
+
+
+

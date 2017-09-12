@@ -1,5 +1,10 @@
 .influencers-block {
   background-color: #dfdfdf;
+  padding-top: 60px;
+
+  @media (max-width: 767px) {
+    position: relative;
+  }
 
   .polygon-grey {
     position: absolute;
@@ -54,4 +59,19 @@
   .slider-wrap {
 
   }
+
+  .positioned-title {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+  }
+}
+
+.influencers-title {
+  font-size: 36px;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
 }
