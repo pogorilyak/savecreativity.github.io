@@ -1,6 +1,6 @@
 // General variables ----
 $default-fonts  : "Helvetica", Arial, sans-serif;
-$base-font-name : 'san-francisco';
+$base-font-name : 'lato';
 $extra-font-name : 'sedgwickave';
 $extra-font  : $extra-font-name, cursive;
 // ----------------------
@@ -10,8 +10,8 @@ $fonts-path      : '../fonts/';
 
 $fonts-data : (
         $base-font-name : (
-                1: ('san-francisco/', 'sanfranciscodisplay-light', 'san-francisco-display-light', 'SanFranciscoDisplayLight', 300),
-                2: ('san-francisco/', 'sanfranciscodisplay-heavy', 'san-francisco-display-heavy', 'SanFranciscoDisplayHeavy', 700),
+                1: ('lato/', 'lato-light', 'lato light', 'latoLight', 300),
+                2: ('lato/', 'lato-black', 'lato black', 'latoBlack', 700),
         ),
         $extra-font-name : (
                 1: ('sedgwickave/', 'sedgwickave-regular', 'sedgwickave-regular', 'SedgwickaveRegular', 400)

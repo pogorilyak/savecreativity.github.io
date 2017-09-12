@@ -17,13 +17,18 @@
 <nav class="main-nav">
     <div class="container">
         <div class="row">
-            <ul class="nav-list float-right" id="menu">
+            <ul class="nav-list" id="menu">
                 <li data-menuanchor="page1"><a href="#page1" class="">Donate</a></li>
                 <li data-menuanchor="page2"><a href="#page2" class="" >Influencers</a></li>
                 <li data-menuanchor="page3"><a href="#page3" class="" >Social feed</a></li>
             </ul>
         </div>
     </div>
+    <button class="toggler" id="toggleBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </nav>
 <main id="pagepiling">
     <header class="header-block section placeholder" id="section1">
@@ -61,7 +66,7 @@
                                                  style="enable-background:new 0 0 310 310;"
                                                  xml:space="preserve">
 
-                                                <path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
+                                                <path d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
                                                     C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527
                                                     C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991
                                                     c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764
@@ -150,13 +155,16 @@
         </div>
     </header>
     <section class="influencers-block section" id="section2">
+        <div class="container positioned-title">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-6">
+                    <h3 class="influencers-title">Our Influencers</h3>
+                </div>
+            </div>
+        </div>
         <div class="influencers-content">
             <div class="container">
                 <div class="row">
-                    <h3 class="influencers-title">
-                        Our <br>
-                        Influencers
-                    </h3>
                     <div class="bxslider" id="slider"></div>
                 </div>
             </div>
@@ -198,25 +206,82 @@
             data-feed-id="vladimirpogoril"></ul>
     </section>
     <div class="information-block section" id="section4">
-        <section>
-
+        <span class="polygon-white">
+            <svg preserveAspectRatio="none"
+                 viewBox="0 0 100 100">
+              <polygon points="0,0 100,0 0,16 "
+                       opacity="1">
+              </polygon>
+            </svg>
+        </span>
+        <span class="polygon-yellow">
+            <svg preserveAspectRatio="none"
+                 viewBox="0 0 100 100">
+              <polygon points="0,0 100,0 100,10"
+                       opacity="1">
+              </polygon>
+            </svg>
+        </span>
+        <section class="info-wrap">
+            <div class="info-image-wrap">
+                <img src="images/peter-ustinov.png" alt="peter-ustinov">
+            </div>
+            <div class="info-content">
+                <h3 class="info-title">#SaveCreativity</h3>
+                <p class="info-description">
+                    Ist eine Aktion der Peter Ustinov Stiftung.
+                </p>
+                <p class="info-description">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et
+                    accusam et justo duo dolores et ea rebum. Stet clita kasd
+                    gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+                <img src="images/logo.png" class="logo" alt="logo">
+            </div>
         </section>
         <footer class="main-footer">
+            <div class="footer-logo">
+                <img src="images/logo.png" class="logo" alt="logo">
+            </div>
+            <div class="footer-item">
+                <p>
+                    Lorem ipsum dolor sit amet, <br>
+                    Consetetur sadipscing elitr, sed <br>
+                    Diam nonumy eirmod.
+                </p>
+            </div>
+            <div class="footer-item">
+                <p>
+                    Lorem ipsum dolor sit amet, <br>
+                    Consetetur sadipscing elitr, sed <br>
+                    Diam nonumy eirmod.
+                </p>
+            </div>
+            <div class="footer-item">
+                <p>
+                    Lorem ipsum dolor sit amet, <br>
+                    Consetetur sadipscing elitr, sed <br>
+                    Diam nonumy eirmod.
+                </p>
+            </div>
         </footer>
     </div>
 </main>
 <div id="template" class="hidden">
-    <li class="influencer-item">
-        <img src="" alt="influencer" class="influencer-image">
-        <p class="influencer-description"></p>
-        <p class="influencer-name-wrap">
-            <span>Follow</span>
-            <span class="influencer-name"></span>
-        </p>
-        <ul class="share-list">
-            <li class="share-item">
-                <a href="" class="share-link link-red linkYoutube">
-                    <svg version="1.1"
+    <ul>
+        <li class="influencer-item">
+            <img src="images/felix.png" alt="influencer" class="influencer-image">
+            <p class="influencer-description"></p>
+            <p class="influencer-name-wrap">
+                <span>Follow</span>
+                <span class="influencer-name"></span>
+            </p>
+            <ul class="share-list">
+                <li class="share-item">
+                    <a href="" class="share-link link-red linkYoutube">
+                        <svg version="1.1"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         x="0px"
                         y="0px"
@@ -226,18 +291,18 @@
                         style="enable-background:new 0 0 310 310;"
                         xml:space="preserve">
 
-                            <path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
+                            <path d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
                         C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527
                         C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991
                         c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764
                         c0-3.492,1.822-6.732,4.808-8.546c2.987-1.814,6.702-1.938,9.801-0.328l65.038,33.772c3.309,1.718,5.387,5.134,5.392,8.861
                         C204.394,157.263,202.325,160.684,199.021,162.41z"/>
                         </svg>
-                </a>
-            </li>
-            <li class="share-item">
-                <a href="" class="share-link link-blue-light linkTwitter">
-                    <svg version="1.1"
+                    </a>
+                </li>
+                <li class="share-item">
+                    <a href="" class="share-link link-blue-light linkTwitter">
+                        <svg version="1.1"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         x="0px"
@@ -261,11 +326,11 @@
                         c10.383-27.737,15.871-57.333,15.871-85.589v-1.346c-0.001-4.537,2.051-8.806,5.631-11.712c13.585-11.03,25.415-24.014,35.16-38.591
                         l0,0C411.924,77.126,407.866,72.302,403.632,74.18L403.632,74.18z"/>
                         </svg>
-                </a>
-            </li>
-            <li class="share-item">
-                <a href="" class="share-link link-blue linkInstagram">
-                    <svg version="1.1"
+                    </a>
+                </li>
+                <li class="share-item">
+                    <a href="" class="share-link link-blue linkInstagram">
+                        <svg version="1.1"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         x="0px"
                         y="0px"
@@ -280,15 +345,16 @@
                         c0-7.65,0-17.85-2.55-25.5H459v216.75c0,7.65-5.1,12.75-12.75,12.75H63.75z M459,114.75c0,7.65-5.1,12.75-12.75,12.75h-51
                         c-7.65,0-12.75-5.1-12.75-12.75v-51c0-7.65,5.1-12.75,12.75-12.75h51C453.9,51,459,56.1,459,63.75V114.75z"/>
                         </svg>
-                </a>
-            </li>
-        </ul>
-    </li>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </div>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.pagepiling.min.js"></script>
 <script src="js/jquery.bxslider.min.js"></script>
 <script src="js/main.js"></script>
-
 </body>
 </html>
