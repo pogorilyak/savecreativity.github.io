@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 3000;
   width: 100%;
   background-color: #000;
   font-size: 14px;
@@ -134,7 +134,7 @@
 
   .header-info {
     position: relative;
-    z-index: 2;
+    z-index: 2000;
     padding-top: 60px;
   }
 
@@ -204,7 +204,7 @@
     visibility: visible;
     display: inline-block !important;
   }
-
+  
   .creativity-title {
     font-weight: 300;
 
@@ -239,6 +239,23 @@
       outline: none;
     }
   }
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+    padding: 25px;
+
+    .creativity-title {
+      font-size: 30px;
+    }
+
+    .creativity-btn {
+      width: auto;
+      height: auto;
+      line-height: 60px;
+      font-size: 26px;
+      padding: 0 20px;
+    }
+  }
 }
 
 .donate-block {
@@ -247,9 +264,13 @@
     margin: 24px 0 15px;
     font-size: 18px;
     text-transform: uppercase;
-    color: #000000;
+    color: #000;
     line-height: 1;
     font-weight: 700;
+
+    @media (max-width: 767px) {
+      color: #fff;
+    }
   }
 }
 
@@ -297,12 +318,9 @@
 }
 
 .gratitude-block {
-  padding-right: 50px;
 
   .gratitude-title {
-    color: #ffffff;
-    font-size: 80px;
-    line-height: 100px;
+    color: #fff;
     font-family: $extra-font;
     font-weight: 400;
   }
@@ -314,11 +332,53 @@
     color: #50e3c2;
     font-size: 24px;
   }
+
+  @media (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 30px;
+
+    .gratitude-author {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 50px;
+
+    .gratitude-title {
+      font-size: 80px;
+      line-height: 100px;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.share-list {
+  @media (max-width: 767px) {
+    text-align: center;
+
+    li {
+      display: inline-block;
+    }
+  }
 }
 
 .header-flex {
+  display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    .donate-block {
+      order: 1;
+      text-align: center;
+    }
+  }
+
   @media (min-width: 768px) {
-    display: flex;
     justify-content: space-between;
     align-items: flex-end;
   }

@@ -4,6 +4,7 @@
   *zoom: 1;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
+  margin: 0 auto;
 
   img {
     max-width: 100%;
@@ -124,7 +125,9 @@ ul.bxslider {
   flex-direction: column;
 
   .influencer-image {
-    margin-top: auto;
+    @media (min-width: 768px) {
+      margin-top: auto;
+    }
   }
 
   .influencer-description {

@@ -1,9 +1,21 @@
 .influencers-block {
-  background-color: #dfdfdf;
-  padding-top: 60px;
+  overflow: hidden;
 
   @media (max-width: 767px) {
     position: relative;
+    padding-top: 70px;
+    margin-top: -70px;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    background-color: #dfdfdf;
+  }
+
+  .polygon-grey,
+  .polygon-white,
+  .polygon-yellow  {
+    pointer-events: none;
   }
 
   .polygon-grey {
@@ -56,16 +68,18 @@
     z-index: 3;
   }
 
-  .slider-wrap {
-
-  }
-
   .positioned-title {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
+    position: relative;
     z-index: 4;
+    padding: 20px 0;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 0;
+    }
   }
 }
 

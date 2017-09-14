@@ -68,9 +68,9 @@ var influencers = [
 ];
 
 $(document).ready(function() {
-    var height = window.innerHeight;
-    var width = window.innerWidth;
-    var $slider = $('#slider');
+    var height           = window.innerHeight;
+    var width            = window.innerWidth;
+    var $slider          = $('#slider');
 
     if (width <= 767) {
         var $toggleBtn = $('#toggleBtn');
@@ -121,19 +121,46 @@ $(document).ready(function() {
         var $slider = $('#slider');
         var $template = $('#template');
         var $templateItem = $template.find('.influencer-item');
+        var responsiveObj = {
+            pager: false,
+            infiniteLoop: false,
+            slideMargin: 0,
+            adaptiveHeight: true
+        };
 
         data.map(function (el) {
             $slider.append(createInfluencer($templateItem.clone(), el));
         });
 
-        $slider.bxSlider({
-            pager: false,
-            infiniteLoop: false,
-            minSlides: 4,
-            maxSlides: 4,
-            slideWidth: 320,
-            slideMargin: 0
-        });
+        if (width >= 850) {
+            responsiveObj.minSlides = 4;
+            responsiveObj.maxSlides = 4;
+
+            responsiveObj.slideWidth = 320;
+        }
+
+        if (width < 850) {
+            responsiveObj.minSlides = 3;
+            responsiveObj.maxSlides = 3;
+
+            responsiveObj.slideWidth = 200;
+        }
+
+        if (width < 768) {
+            responsiveObj.minSlides = 2;
+            responsiveObj.maxSlides = 2;
+
+            responsiveObj.slideWidth = 250;
+        }
+
+        if (width < 600) {
+            responsiveObj.minSlides = 1;
+            responsiveObj.maxSlides = 1;
+
+            responsiveObj.slideWidth = 250;
+        }
+
+        $slider.bxSlider(responsiveObj);
     }
 
     createSlider(influencers);
